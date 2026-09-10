@@ -12,7 +12,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(
   cors({
-    origin: "note-app-ten-coral.vercel.app",
+    origin: "https://note-app-ten-coral.vercel.app",
     credentials: true,
   }),
 );
