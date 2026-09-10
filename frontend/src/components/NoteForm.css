@@ -1,0 +1,190 @@
+/* Main Container */
+.noteFormContainer {
+  min-height: calc(100vh - 70px);
+  padding: 20px 50px 40px;
+
+  box-sizing: border-box;
+  background-color: #f8fafc;
+}
+
+/* Heading */
+.add_noteHead {
+  margin: 0 0 25px;
+
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #172554;
+}
+
+/* Image + Form */
+.noteFormContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 60px;
+}
+
+/* Image */
+.noteFormImage {
+  width: 420px;
+  height: 420px;
+
+  overflow: hidden;
+  border-radius: 20px;
+
+  background-color: white;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  flex-shrink: 0;
+}
+
+.noteFormImage img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+}
+
+/* Form Card */
+.noteFormCard {
+  width: 420px;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  background-color: white;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Error */
+.noteFormCard h3 {
+  margin: 0 0 15px;
+  color: #dc2626;
+  font-size: 15px;
+}
+
+/* Labels */
+.noteFormCard label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Input */
+.inp {
+  width: 100%;
+  height: 55px;
+
+  padding: 0 15px;
+  margin-bottom: 20px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+
+  outline: none;
+
+  font-size: 16px;
+}
+
+.inp:focus {
+  border-color: #2563eb;
+}
+
+/* Textarea */
+.text {
+  width: 100%;
+  height: 180px;
+
+  padding: 15px;
+  margin-bottom: 20px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+
+  outline: none;
+
+  font-size: 16px;
+  font-family: inherit;
+
+  resize: none;
+}
+
+.text:focus {
+  border-color: #2563eb;
+}
+
+/* Button */
+.addNote {
+  width: 100%;
+  height: 55px;
+
+  border: none;
+  border-radius: 9px;
+
+  background-color: #2563eb;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.addNote:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .noteFormContainer {
+    padding: 20px;
+  }
+
+  .noteFormContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .noteFormImage {
+    width: 350px;
+    height: 350px;
+  }
+
+  .noteFormCard {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 500px) {
+  .add_noteHead {
+    font-size: 26px;
+  }
+
+  .noteFormImage {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+  }
+
+  .noteFormCard {
+    padding: 25px;
+  }
+}

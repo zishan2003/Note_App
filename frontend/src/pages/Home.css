@@ -1,0 +1,114 @@
+a i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  margin: 12px 20px 18px;
+  padding: 5px;
+
+  color: #16a34a;
+  font-size: 24px;
+
+  border: 1px solid #7c3aed;
+  border-radius: 8px;
+
+  box-sizing: border-box;
+
+  transition: all 0.3s ease;
+}
+
+a i:hover {
+  color: white;
+  background-color: #16a34a;
+  border-color: #16a34a;
+
+  transform: rotate(90deg) scale(1.08);
+
+  box-shadow: 0 5px 15px rgba(22, 163, 74, 0.3);
+}
+
+a i:active {
+  transform: rotate(90deg) scale(0.9);
+}
+
+a i:hover {
+  animation: plusGlow 1s ease-in-out infinite alternate;
+}
+
+@keyframes plusGlow {
+  from {
+    box-shadow: 0 0 5px rgba(22, 163, 74, 0.3);
+  }
+
+  to {
+    box-shadow: 0 0 15px rgba(22, 163, 74, 0.6);
+  }
+}
+
+.note-content {
+  width: 100%;
+  margin-top: 5px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.note-card {
+  transition: all 0.3s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.note-card a {
+  transition: all 0.3s ease;
+}
+
+.note-card a:hover {
+  color: #16a34a;
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  a i {
+    width: 42px;
+    height: 42px;
+    margin: 10px 15px 16px;
+    font-size: 22px;
+  }
+
+  .note-content {
+    margin-top: 5px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  a i {
+    width: 40px;
+    height: 40px;
+    margin: 8px 12px 14px;
+    font-size: 21px;
+  }
+
+  .note-content {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 350px) {
+  a i {
+    width: 36px;
+    height: 36px;
+    margin: 7px 10px 12px;
+    font-size: 19px;
+  }
+
+  .note-content {
+    padding: 0 10px;
+  }
+}

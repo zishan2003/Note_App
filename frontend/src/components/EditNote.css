@@ -1,0 +1,315 @@
+/* =========================
+   Main Container
+========================= */
+
+.noteFormContainer {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+
+  padding: 20px 30px 40px;
+
+  box-sizing: border-box;
+
+  background-color: #f8fafc;
+}
+
+
+/* =========================
+   Heading
+========================= */
+
+.add_noteHead {
+  margin: 0 0 25px;
+
+  text-align: center;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #172554;
+}
+
+
+/* =========================
+   Image + Form
+========================= */
+
+.noteFormContent {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+}
+
+
+/* =========================
+   Image
+========================= */
+
+.noteFormImage {
+  width: 380px;
+  height: 380px;
+
+  flex: 0 0 380px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background-color: white;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.noteFormImage img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   Form Card
+========================= */
+
+.noteFormCard {
+  width: 380px;
+
+  flex: 0 0 380px;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background-color: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   Form
+========================= */
+
+.noteFormCard h3 {
+  margin: 0 0 15px;
+
+  color: #dc2626;
+
+  font-size: 15px;
+
+  text-align: center;
+}
+
+.noteFormCard label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #334155;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   Input
+========================= */
+
+.inp {
+  width: 100%;
+  height: 50px;
+
+  padding: 0 15px;
+  margin-bottom: 18px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  font-size: 16px;
+}
+
+.inp:focus {
+  border-color: #2563eb;
+}
+
+
+/* =========================
+   Textarea
+========================= */
+
+.text {
+  width: 100%;
+  height: 150px;
+
+  padding: 15px;
+  margin-bottom: 18px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  font-size: 16px;
+
+  font-family: inherit;
+
+  resize: none;
+}
+
+.text:focus {
+  border-color: #2563eb;
+}
+
+
+/* =========================
+   Button
+========================= */
+
+.addNote {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background-color: #2563eb;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.addNote:hover {
+  background-color: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   Laptop / Small Desktop
+========================= */
+
+@media (max-width: 1000px) and (min-width: 701px) {
+
+  .noteFormContainer {
+    padding: 15px 20px 30px;
+  }
+
+  .noteFormContent {
+    gap: 25px;
+  }
+
+  .noteFormImage {
+    width: 330px;
+    height: 330px;
+
+    flex-basis: 330px;
+  }
+
+  .noteFormCard {
+    width: 330px;
+
+    flex-basis: 330px;
+
+    padding: 25px;
+  }
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 700px) {
+
+  .noteFormContainer {
+    padding: 15px;
+  }
+
+  .add_noteHead {
+    font-size: 26px;
+
+    margin-bottom: 20px;
+  }
+
+  .noteFormContent {
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .noteFormImage {
+    width: 100%;
+    max-width: 350px;
+
+    height: 300px;
+
+    flex: none;
+  }
+
+  .noteFormCard {
+    width: 100%;
+    max-width: 420px;
+
+    flex: none;
+
+    padding: 25px;
+  }
+}
+
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 400px) {
+
+  .noteFormContainer {
+    padding: 10px;
+  }
+
+  .add_noteHead {
+    font-size: 23px;
+  }
+
+  .noteFormImage {
+    height: 250px;
+  }
+
+  .noteFormCard {
+    padding: 20px;
+  }
+
+  .text {
+    height: 140px;
+  }
+}
