@@ -22,7 +22,7 @@ const Login = ({setIsLoggedIn}) => {
     e.preventDefault();
     try {
       let apiData = await axios.post(
-        "http://localhost:3000/api/user/login",
+        "https://note-app-smtk.onrender.com/api/user/login",
         { email, password },
         { withCredentials: true },
       );

@@ -14,7 +14,7 @@ const Register = () => {
     e.preventDefault();
     try {
       let apiData = await axios.post(
-        "http://localhost:3000/api/user/register",
+        "https://note-app-smtk.onrender.com/api/user/register",
         { name, email, password },
         { withCredentials: true },
       );
