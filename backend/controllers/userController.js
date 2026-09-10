@@ -6,8 +6,10 @@ const cookieOptions = {
   httpOnly: true,
   secure: true,
   sameSite: "none",
+  path: "/",
 };
 
+// Register user
 exports.registerController = async (req, res) => {
   let { name, email, password } = req.body;
 
@@ -54,6 +56,7 @@ exports.registerController = async (req, res) => {
   }
 };
 
+// Login user
 exports.loginController = async (req, res) => {
   let { email, password } = req.body;
 
@@ -100,6 +103,7 @@ exports.loginController = async (req, res) => {
   }
 };
 
+// Logout user
 exports.logoutController = (req, res) => {
   res.clearCookie("token", cookieOptions);
 
