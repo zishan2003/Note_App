@@ -24,7 +24,7 @@ const EditNote = () => {
   useEffect(() => {
     const getNoteById = async () => {
       let response = await axios.get(
-        `http://localhost:3000/api/note/getnote/${id}`,
+        `https://note-app-smtk.onrender.com/api/note/getnote/${id}`,
         { withCredentials: true },
       );
       setTitle(response.data.title);
@@ -39,7 +39,7 @@ const EditNote = () => {
     e.preventDefault();
     try {
       let response = await axios.put(
-        `http://localhost:3000/api/note/update/${id}`,
+        `https://note-app-smtk.onrender.com/api/note/update/${id}`,
         { title, content },
         { withCredentials: true },
       );

@@ -11,9 +11,12 @@ const Notecontent = () => {
 
   useEffect(() => {
     const getDataApi = async () => {
-      let apiData = await axios.get("http://localhost:3000/api/note/getall", {
-        withCredentials: true,
-      });
+      let apiData = await axios.get(
+        "https://note-app-smtk.onrender.com/api/note/getall",
+        {
+          withCredentials: true,
+        },
+      );
       setData(apiData.data);
     };
     getDataApi();
@@ -21,9 +24,12 @@ const Notecontent = () => {
 
   const deleteHandler = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/note/delete/${id}`, {
-        withCredentials: true,
-      });
+      await axios.delete(
+        `https://note-app-smtk.onrender.com/api/note/delete/${id}`,
+        {
+          withCredentials: true,
+        },
+      );
       setData((prev) => {
         return prev.filter((note) => note._id !== id);
       });

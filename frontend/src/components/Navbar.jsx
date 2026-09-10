@@ -11,7 +11,7 @@ const Navbar = () => {
   const logoutHandler = async () => {
     try {
       const logoutApi = await axios.post(
-        "http://localhost:3000/api/user/logout",
+        "https://note-app-smtk.onrender.com/api/user/logout",
         {},
         {
           withCredentials: true,

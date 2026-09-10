@@ -23,7 +23,7 @@ const NoteForm = () => {
     e.preventDefault();
     try {
       const apiData = await axios.post(
-        "http://localhost:3000/api/note/create",
+        "https://note-app-smtk.onrender.com/api/note/create",
         { title, content },
         { withCredentials: true },
       );
