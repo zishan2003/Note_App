@@ -17,6 +17,10 @@ app.use(
   }),
 );
 
+app.get("/", (req, res) => {
+  res.send("Deployed backend");
+});
+
 //Routes
 app.use("/api/user", userRoutes);
 app.use("/api/note", noteRoutes);
