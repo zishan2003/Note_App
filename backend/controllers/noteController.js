@@ -84,25 +84,25 @@ exports.updateNote = async (req, res) => {
   }
 };
 
-  //Delete Note
-  exports.deleteNote = async (req, res) => {
-    let { id } = req.params;
-    let { email } = req.user;
-    try {
-      let user = await userModel.findOne({ email });
-      if (!user) {
-        return res.status(404).json({ msg: "User not found" });
-      }
-
-      //Check note current user ka hai ki nhi
-      let note = await noteModel.findOne({ _id: id, userId: user._id });
-      if(!note){
-        return res.status(404).json({msg : "Note not Found"})
-      }
-      await noteModel.findByIdAndDelete(id);
-      await userModel.findByIdAndUpdate(user._id, { $pull: { noteId: id } });
-      res.status(200).json({ msg: "Note deleted" });
-    } catch (error) {
-      res.status(500).json(error.message);
+//Delete Note
+exports.deleteNote = async (req, res) => {
+  let { id } = req.params;
+  let { email } = req.user;
+  try {
+    let user = await userModel.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ msg: "User not found" });
     }
-  };
+
+    //Check note current user ka hai ki nhi
+    let note = await noteModel.findOne({ _id: id, userId: user._id });
+    if (!note) {
+      return res.status(404).json({ msg: "Note not Found" });
+    }
+    await noteModel.findByIdAndDelete(id);
+    await userModel.findByIdAndUpdate(user._id, { $pull: { noteId: id } });
+    res.status(200).json({ msg: "Note deleted" });
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+};
